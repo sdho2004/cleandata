@@ -2,28 +2,28 @@
 ## The following steps were used to tidy the raw data
 
 * Read Test data into table
-    subjectTest = "UCI HAR Dataset/test/subject_test.txt"
-    xTest = "UCI HAR Dataset/test/X_test.txt"
-    yTest = "UCI HAR Dataset/test/y_test.txt"
+### subjectTest = "UCI HAR Dataset/test/subject_test.txt"
+### xTest = "UCI HAR Dataset/test/X_test.txt"
+### yTest = "UCI HAR Dataset/test/y_test.txt"
 * Read Train data into table
-    > subjectTrain = "UCI HAR Dataset/train/subject_train.txt"
-    > xTrain = "UCI HAR Dataset/train/X_train.txt"
-    > yTrain = "UCI HAR Dataset/train/Y_train.txt"
+###	subjectTrain = "UCI HAR Dataset/train/subject_train.txt"
+### xTrain = "UCI HAR Dataset/train/X_train.txt"
+### yTrain = "UCI HAR Dataset/train/Y_train.txt"
 * Read in features.txt as table
-	> feat = "UCI HAR Dataset/features.txt"
+### feat = "UCI HAR Dataset/features.txt"
 * Combine all Test data into Test dataframe 'dfTest'
-	> dfTest = subjectTest + xTest + yTest
+### dfTest = subjectTest + xTest + yTest
 * Combine all Train data into Train dataframe 'dfTrain'
-	> dfTrain = subjectTrain + xTrain + yTrain
+### dfTrain = subjectTrain + xTrain + yTrain
 * Combine both Test and Train dataframes into 'df'
-	> df = dfTest + dfTrain
+### df = dfTest + dfTrain
 * Label dataframe column based on README.txt and Features.txt description
-	> Rename Col 1 to subject
-	> Rename Col 2 to activity
-	> Rename Col from 3 to 363 based on features.txt list
+### Rename Col 1 to subject
+### Rename Col 2 to activity
+### Rename Col from 3 to 363 based on features.txt list
 * Generate a subset of df to include "subject", "activity", "-mean()" and "-std()" columns  
 * Read in activity_labels.txt as table
-	> act = "UCI HAR Dataset/activity_labels.txt"
+### act = "UCI HAR Dataset/activity_labels.txt"
 * Replace non descriptive integer with descriptive names based on activity_labels.txt
 * Load dplyr package; assuming the package has already been installed
 * Tidy data set with the average of each variable for each activity and each subject using summarise_each() function
